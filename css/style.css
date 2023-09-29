@@ -1,0 +1,106 @@
+.p_border {
+    border: 1px solid grey;
+}
+.p_block {
+    display: block;
+}
+.p_mx-auto {
+    margin-left: auto !important;
+    margin-right: auto !important;
+}
+.p_fw-bold {
+    font-weight: bold;
+}
+.p_fs-1 {font-size: 2rem;}
+.p_fs-2 {font-size: 1.8rem;}
+.p_fs-3 {font-size: 1.6rem;}
+.p_fs-4 {font-size: 1.4rem;}
+.p_fs-5 {font-size: 1.2rem;}
+.p_fs-6 {font-size: 0.8rem;}
+
+.p_p1 {padding: 0.25rem;}
+.p_p2 {padding: 0.5rem;}
+.p_p3 {padding: 0.75rem;}
+.p_p4 {padding: 1.25rem;}
+.p_p5 {padding: 1.50rem;}
+
+.p_px1 {
+    padding-left: 0.25rem;
+    padding-right: 0.25rem;
+}
+.p_px2 {
+    padding-left: 0.5rem !important;
+    padding-right: 0.5rem !important;
+}
+.p_px3 {
+    padding-left: 0.75rem !important;
+    padding-right: 0.75rem !important;
+}
+.p_px4 {
+    padding-left: 1.25rem !important;
+    padding-right: 1.25rem !important;
+}
+.p_px5 {
+    padding-left: 1.50rem !important;
+    padding-right: 1.50rem !important;
+}
+.p_mt1 {margin-top: 0.25rem;}
+.p_mt2 {margin-top: 0.50rem;}
+.p_mt3 {margin-top: 0.75rem;}
+.p_mt4 {margin-top: 1.25rem;}
+.p_mt5 {margin-top: 1.5rem;}
+
+ul {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+li {
+    list-style-type: square !important;
+    margin-left: 20px;
+}
+.chip {
+    list-style-type: circle;
+}
+.ul_e .li_e {
+    display: flex;
+    cursor: pointer;
+}
+.lite {
+    position: relative;
+    background: repeating-conic-gradient(from var(--a), #ff2770 0%, #2770 5%,
+    transparent 5%, transparent 40%, #ff2770 50%);
+    animation: animate 4s linear infinite;
+    border-radius: 20px;
+}
+@property --a {
+	syntax: '<angle>';
+	inherits: false;
+	initial-value: 0;
+}
+@keyframes animate {
+    0% {
+        --a: 0deg;
+    }
+    100% {
+        --a: 360deg;
+    }
+}
+.lite::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: repeating-conic-gradient(from var(--a), #45f3ff 0%, #45f3ff 5%,
+    transparent 5%, transparent 40%, #45f3ff 50%);
+    animation: animate 4s linear infinite;
+    animation-delay: -1s;
+    border-radius: 20px;
+}
+.lite::after {
+    content: '';
+    inset: 8px;
+    background: #2d2d39;
+    border-radius: 15px;
+    border: 8px solid #25252b;
+    opacity: 0;
+}
