@@ -1,5 +1,6 @@
 .p_border {
     border: 1px solid grey;
+    border-radius: 15px;
 }
 .p_block {
     display: block;
