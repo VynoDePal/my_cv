@@ -1,6 +1,7 @@
 .p_border {
     border: 1px solid grey;
 }
+
 .p_block {
     display: block;
 }
@@ -8,9 +9,13 @@
     margin-left: auto !important;
     margin-right: auto !important;
 }
+
+/* Poids de police en gras */
 .p_fw-bold {
     font-weight: bold;
 }
+
+/* Tailles de police */
 .p_fs-1 {font-size: 2rem;}
 .p_fs-2 {font-size: 1.8rem;}
 .p_fs-3 {font-size: 1.6rem;}
@@ -18,12 +23,14 @@
 .p_fs-5 {font-size: 1.2rem;}
 .p_fs-6 {font-size: 0.8rem;}
 
+/* Mages intérieure */
 .p_p1 {padding: 0.25rem;}
 .p_p2 {padding: 0.5rem;}
 .p_p3 {padding: 0.75rem;}
 .p_p4 {padding: 1.25rem;}
 .p_p5 {padding: 1.50rem;}
 
+/* Mages intérieures sur l'axe horizontal */
 .p_px1 {
     padding-left: 0.25rem;
     padding-right: 0.25rem;
@@ -44,6 +51,8 @@
     padding-left: 1.50rem !important;
     padding-right: 1.50rem !important;
 }
+
+/* Mages supérieures externe */
 .p_mt1 {margin-top: 0.25rem;}
 .p_mt2 {margin-top: 0.50rem;}
 .p_mt3 {margin-top: 0.75rem;}
@@ -54,17 +63,29 @@ ul {
     margin-top: 0;
     margin-bottom: 0;
 }
+
 li {
     list-style-type: square !important;
     margin-left: 20px;
 }
+
+/* Style des différents certificats */
 .chip {
     list-style-type: circle;
 }
+
+/* Styles de listes GitHub et Linkedin */
 .ul_e .li_e {
     display: flex;
     cursor: pointer;
 }
+
+@property --a {
+	syntax: '<angle>';
+	inherits: false;
+	initial-value: 0;
+}
+
 .lite {
     position: relative;
     background: repeating-conic-gradient(from var(--a), #ff2770 0%, #2770 5%,
@@ -72,11 +93,7 @@ li {
     animation: animate 4s linear infinite;
     border-radius: 20px;
 }
-@property --a {
-	syntax: '<angle>';
-	inherits: false;
-	initial-value: 0;
-}
+
 @keyframes animate {
     0% {
         --a: 0deg;
@@ -85,6 +102,7 @@ li {
         --a: 360deg;
     }
 }
+
 .lite::before {
     content: '';
     position: absolute;
@@ -96,6 +114,7 @@ li {
     animation-delay: -1s;
     border-radius: 20px;
 }
+
 .lite::after {
     content: '';
     inset: 8px;
@@ -103,4 +122,26 @@ li {
     border-radius: 15px;
     border: 8px solid #25252b;
     opacity: 0;
+}
+
+@media (min-width: 350px) and (max-width: 850px) {
+    body {
+        font-size: 14px !important;
+    }
+    .container {
+        padding: 0;
+    }
+    .col .s4 {
+        width: 100%;
+    }
+    .col .s8 {
+        width: 100% !important;
+        display: block;
+    }
+    .mail, .tel {
+        font-size: 9px;
+    }
+    .lite::before, .lite::after {
+        display: none;
+    }
 }
